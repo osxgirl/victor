@@ -1,0 +1,149 @@
+  [1m[35m (183.5ms)[0m  [1m[35mCREATE DATABASE "victor_development" ENCODING = 'unicode'[0m
+  [1m[35m (79.3ms)[0m  [1m[35mCREATE DATABASE "victor_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7016521159720011450)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLocations (20210920022848)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210920022848"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-20 02:29:17.010635"], ["updated_at", "2021-09-20 02:29:17.010635"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7016521159720011450)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-09-19 22:29:33 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.0ms | Allocations: 520)
+Completed 200 OK in 41ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 4340)
+
+
+Started GET "/" for ::1 at 2021-09-19 22:29:35 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 579)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 1369)
+
+
+Started GET "/login" for ::1 at 2021-09-19 22:29:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/location" for ::1 at 2021-09-19 22:29:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/location"):
+  
+Started GET "/" for ::1 at 2021-09-19 22:29:46 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 44)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 421)
+
+
+Started GET "/Location" for ::1 at 2021-09-19 22:29:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/Location"):
+  
+Started GET "/Locations" for ::1 at 2021-09-19 22:29:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/Locations"):
+  
+Started GET "/Location" for ::1 at 2021-09-19 22:29:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/Location"):
+  
+Started GET "/locations" for ::1 at 2021-09-19 22:31:18 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1306)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/heather/Development/code/victor/public/packs
+[Webpacker] Hash: e2f281de3ea1fdc4fa5a
+Version: webpack 4.46.0
+Time: 1424ms
+Built at: 09/19/2021 10:31:22 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-be412d64645010827f4e.js    125 KiB  application  [emitted] [immutable]  application
+js/application-be412d64645010827f4e.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-be412d64645010827f4e.js js/application-be412d64645010827f4e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3847.5ms | Allocations: 21243)
+Completed 200 OK in 3858ms (Views: 3849.6ms | ActiveRecord: 1.8ms | Allocations: 22799)
+
+
+Started GET "/locations/new" for ::1 at 2021-09-19 22:31:24 -0400
+Processing by LocationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 17.0ms | Allocations: 4978)
+  Rendered locations/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 5345)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 8920)
+Completed 200 OK in 33ms (Views: 23.9ms | ActiveRecord: 3.9ms | Allocations: 13267)
+
+
+Started POST "/locations" for ::1 at 2021-09-19 22:31:36 -0400
+Processing by LocationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "location"=>{"name"=>"Heather's", "address"=>"455 Tamarack Lane"}, "commit"=>"Create Location"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+  [1m[36mLocation Create (1.4ms)[0m  [1m[32mINSERT INTO "locations" ("name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Heather's"], ["address", "455 Tamarack Lane"], ["created_at", "2021-09-20 02:31:36.882279"], ["updated_at", "2021-09-20 02:31:36.882279"]]
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/locations/1
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms | Allocations: 2848)
+
+
+Started GET "/locations/1" for ::1 at 2021-09-19 22:31:36 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3864)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 1.5ms | Allocations: 5676)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (30.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "victor_development"[0m
+  [1m[35m (27.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "victor_test"[0m
+  [1m[35m (75.7ms)[0m  [1m[35mCREATE DATABASE "victor_development" ENCODING = 'unicode'[0m
+  [1m[35m (75.4ms)[0m  [1m[35mCREATE DATABASE "victor_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7016521159720011450)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLocations (20210920022848)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "name" character varying, "address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210920022848"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-20 02:32:44.191359"], ["updated_at", "2021-09-20 02:32:44.191359"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7016521159720011450)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
