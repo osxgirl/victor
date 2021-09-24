@@ -147,3 +147,92 @@ Migrating to CreateLocations (20210920022848)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7016521159720011450)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-09-24 12:46:47 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.6ms | Allocations: 355)
+Completed 200 OK in 28ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 2641)
+
+
+Started GET "/" for ::1 at 2021-09-24 12:46:52 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 417)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 1165)
+
+
+Started GET "/locations" for ::1 at 2021-09-24 12:46:55 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1259)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 7690)
+Completed 200 OK in 60ms (Views: 50.5ms | ActiveRecord: 1.7ms | Allocations: 9200)
+
+
+Started GET "/locations/new" for ::1 at 2021-09-24 12:46:59 -0400
+Processing by LocationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 19.5ms | Allocations: 2917)
+  Rendered locations/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 3282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 6855)
+Completed 200 OK in 75ms (Views: 32.9ms | ActiveRecord: 27.2ms | Allocations: 11150)
+
+
+Started POST "/locations" for ::1 at 2021-09-24 12:47:12 -0400
+Processing by LocationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "location"=>{"name"=>"Avon", "address"=>"Rockville Rd"}, "commit"=>"Create Location"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+  [1m[36mLocation Create (10.8ms)[0m  [1m[32mINSERT INTO "locations" ("name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Avon"], ["address", "Rockville Rd"], ["created_at", "2021-09-24 16:47:12.408529"], ["updated_at", "2021-09-24 16:47:12.408529"]]
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/locations/1
+Completed 302 Found in 20ms (ActiveRecord: 13.3ms | Allocations: 2863)
+
+
+Started GET "/locations/1" for ::1 at 2021-09-24 12:47:12 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (6.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3869)
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 7.0ms | Allocations: 5683)
+
+
+Started GET "/locations/1" for ::1 at 2021-09-24 12:47:16 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3676)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 4761)
+
+
+Started GET "/locations" for ::1 at 2021-09-24 12:47:16 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4586)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.8ms | Allocations: 4983)
+
+
