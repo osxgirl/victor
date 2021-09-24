@@ -236,3 +236,289 @@ Processing by LocationsController#index as HTML
 Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.8ms | Allocations: 4983)
 
 
+Started GET "/" for ::1 at 2021-09-24 12:49:37 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.9ms | Allocations: 355)
+Completed 200 OK in 30ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 2698)
+
+
+Started GET "/" for ::1 at 2021-09-24 12:49:45 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/heather/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.7ms | Allocations: 298)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1008)
+
+
+Started GET "/" for ::1 at 2021-09-24 12:51:37 -0400
+  
+ActionController::RoutingError (uninitialized constant WelcomeController):
+  
+Started GET "/" for ::1 at 2021-09-24 12:52:04 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 5.2ms | Allocations: 3847)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3917)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 5129)
+
+
+  
+ActionView::Template::Error (The asset "logo.png" is not present in the asset pipeline.
+):
+    1: <div class="jumbotron text-center">
+    2:   <div class="container">
+    3:     <a href="/" class="logo"><img src="<%= asset_path('logo.png') %>"></a>
+    4:     <h1>Guides</h1>
+    5:       <p>30 minute Coaching Sessions</p>
+    6:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Christy Schumm', christy_path %></a>
+  
+app/views/welcome/index.erb:3
+Started GET "/" for ::1 at 2021-09-24 12:52:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 42.5ms | Allocations: 7127)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 7198)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms | Allocations: 7553)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `christy_path' for #<ActionView::Base:0x007f96f724ae88>):
+    3:     <a href="/" class="logo"><img src="<%= asset_path('logo.png') %>"></a>
+    4:     <h1>Guides</h1>
+    5:       <p>30 minute Coaching Sessions</p>
+    6:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Christy Schumm', christy_path %></a>
+    7:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Natalia Stanton Jr.', natalia_path %></a>
+    8:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Nola Murazik V', nola_path %></a>
+    9:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Elyssa O’Kon', elyssa_path %></a>
+  
+app/views/welcome/index.erb:6
+Started GET "/" for ::1 at 2021-09-24 12:53:59 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-09-24 12:54:44 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 4.2ms | Allocations: 2309)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2379)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3477)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `christy_path' for #<ActionView::Base:0x007f96efec9fe0>):
+    3:     <a href="/" class="logo"><img src="<%= asset_path('logo.png') %>"></a>
+    4:     <h1>Guides</h1>
+    5:       <p>30 minute Coaching Sessions</p>
+    6:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Locations', christy_path %></a>
+    7:    </div>
+    8: </div>
+    9:    
+  
+app/views/welcome/index.erb:6
+Started GET "/" for ::1 at 2021-09-24 12:55:07 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 2.2ms | Allocations: 1624)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1694)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2787)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `locations' for #<ActionView::Base:0x007f96f0610600>):
+    3:     <a href="/" class="logo"><img src="<%= asset_path('logo.png') %>"></a>
+    4:     <h1>Guides</h1>
+    5:       <p>30 minute Coaching Sessions</p>
+    6:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Locations', locations %></a>
+    7:    </div>
+    8: </div>
+    9:    
+  
+app/views/welcome/index.erb:6
+Started GET "/" for ::1 at 2021-09-24 12:55:17 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 3.7ms | Allocations: 1199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 5128)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 6251)
+
+
+Started GET "/" for ::1 at 2021-09-24 12:55:47 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 1.6ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4453)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 5568)
+
+
+Started GET "/" for ::1 at 2021-09-24 12:55:49 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 2.0ms | Allocations: 646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4139)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4514)
+
+
+Started GET "/" for ::1 at 2021-09-24 13:04:13 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 4.2ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4719)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 5828)
+
+
+Started GET "/" for ::1 at 2021-09-24 13:04:16 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 1.3ms | Allocations: 646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4138)
+Completed 200 OK in 8ms (Views: 7.2ms | Allocations: 4513)
+
+
+Started GET "/" for ::1 at 2021-09-24 13:04:19 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 1.8ms | Allocations: 641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4134)
+Completed 200 OK in 11ms (Views: 8.7ms | Allocations: 4509)
+
+
+Started GET "/" for ::1 at 2021-09-24 13:09:10 -0400
+  
+SyntaxError (/Users/heather/Development/code/victor/config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+  get 'locations' as: 'location'
+                  ^~):
+  
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/" for ::1 at 2021-09-24 13:09:24 -0400
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-09-24 13:09:48 -0400
+  
+SyntaxError (/Users/heather/Development/code/victor/config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+...ocations#location as: 'location'
+...                       ^~~~~~~~
+/Users/heather/Development/code/victor/config/routes.rb:7: unterminated string meets end of file):
+  
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:7: unterminated string meets end of file
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:7: unterminated string meets end of file
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:7: unterminated string meets end of file
+Started GET "/" for ::1 at 2021-09-24 13:10:30 -0400
+  
+SyntaxError (/Users/heather/Development/code/victor/config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+...cations#location, as: 'location'
+...                       ^~~~~~~~
+/Users/heather/Development/code/victor/config/routes.rb:7: unterminated string meets end of file):
+  
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:7: unterminated string meets end of file
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:7: unterminated string meets end of file
+config/routes.rb:5: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:7: unterminated string meets end of file
+Started GET "/" for ::1 at 2021-09-24 13:10:49 -0400
+  
+ArgumentError (Invalid route name, already in use: 'location' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-09-24 13:11:32 -0400
+  
+ArgumentError (Invalid route name, already in use: 'location' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-09-24 13:14:01 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 16.4ms | Allocations: 2163)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 2233)
+Completed 500 Internal Server Error in 19ms (Allocations: 3331)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"locations"}, missing required keys: [:id]):
+    4:     <h1>VTA</h1>
+    5:       <p>Victor Travel Aid</p>
+    6:         <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Locations' %></a>
+    7:                 <a type="button" class="btn btn-lg btn-primary" <%= link_to 'Locatons', location_path %></a>
+    8:    </div>
+    9: </div>
+   10:    
+  
+app/views/welcome/index.erb:7
+Started GET "/" for ::1 at 2021-09-24 13:16:07 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 1.7ms | Allocations: 1226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4869)
+Completed 200 OK in 15ms (Views: 14.5ms | Allocations: 5989)
+
+
+Started GET "/locations" for ::1 at 2021-09-24 13:16:09 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 91.9ms | Allocations: 8765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 98.0ms | Allocations: 12347)
+Completed 200 OK in 108ms (Views: 101.1ms | ActiveRecord: 35.9ms | Allocations: 13641)
+
+
+Started GET "/" for ::1 at 2021-09-24 13:16:21 -0400
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 1.7ms | Allocations: 721)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4403)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 5512)
+
+
+Started GET "/locations" for ::1 at 2021-09-24 13:16:22 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 4853)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 1.0ms | Allocations: 5772)
+
+
