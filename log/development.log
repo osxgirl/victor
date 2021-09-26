@@ -729,3 +729,14 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 5503)
 
 
+Started GET "/" for ::1 at 2021-09-26 10:48:26 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 107.3ms | Allocations: 11448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 126.5ms | Allocations: 19233)
+Completed 200 OK in 144ms (Views: 131.3ms | ActiveRecord: 0.0ms | Allocations: 22391)
+
+
