@@ -1,3 +1,7 @@
+<meta charset="utf-8">
+        
+        <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,5 +14,24 @@
   <%= @location.address %>
 </p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+ <div id="map"></div>
+        
+        <script>
+        mapkit.init({
+            authorizationCallback: function(done) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/services/jwt");
+                xhr.addEventListener("load", function() {
+                    done(this.responseText);
+                });
+                xhr.send();
+            }
+        });
+        
+        var Cupertino = new mapkit.CoordinateRegion(
+            new mapkit.Coordinate(37.3316850890998, -122.030067374026),
+            new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+        );
+        var map = new mapkit.Map("map");
+        map.region = Cupertino;
+        </script>

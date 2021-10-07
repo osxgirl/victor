@@ -740,3 +740,373 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 144ms (Views: 131.3ms | ActiveRecord: 0.0ms | Allocations: 22391)
 
 
+Started GET "/" for ::1 at 2021-10-07 18:11:55 -0400
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (Duration: 54.5ms | Allocations: 11256)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.5ms | Allocations: 19597)
+Completed 200 OK in 117ms (Views: 98.5ms | ActiveRecord: 0.0ms | Allocations: 23694)
+
+
+Started GET "/locations" for ::1 at 2021-10-07 18:12:02 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (5.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 5051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 8554)
+Completed 200 OK in 41ms (Views: 18.4ms | ActiveRecord: 16.9ms | Allocations: 10155)
+
+
+Started GET "/locations/2" for ::1 at 2021-10-07 18:12:05 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 439)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3879)
+Completed 200 OK in 23ms (Views: 8.0ms | ActiveRecord: 2.5ms | Allocations: 6236)
+
+
+Started GET "/locations" for ::1 at 2021-10-07 18:12:43 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1010)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4450)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 1.8ms | Allocations: 4911)
+
+
+Started GET "/locations/new" for ::1 at 2021-10-07 18:12:46 -0400
+Processing by LocationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 37.6ms | Allocations: 6644)
+  Rendered locations/new.html.erb within layouts/application (Duration: 42.0ms | Allocations: 7014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 10352)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 10980)
+
+
+Started GET "/locations" for ::1 at 2021-10-07 18:12:53 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1010)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4449)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.4ms | Allocations: 4910)
+
+
+Started GET "/locations/2/edit" for ::1 at 2021-10-07 18:12:56 -0400
+Processing by LocationsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/edit.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 3.6ms | Allocations: 734)
+  Rendered locations/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4428)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 2.1ms | Allocations: 5707)
+
+
+Started GET "/locations" for ::1 at 2021-10-07 18:12:57 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4457)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 1.1ms | Allocations: 4927)
+
+
+Started GET "/locations/2" for ::1 at 2021-10-07 18:12:58 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3548)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 4699)
+
+
+Started GET "/locations/2" for ::1 at 2021-10-07 18:13:28 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 4143)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.6ms | Allocations: 6063)
+
+
+Started GET "/services/jwt" for ::1 at 2021-10-07 18:13:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/services/jwt"):
+  
+Started GET "/locations/states.json" for ::1 at 2021-10-07 18:13:28 -0400
+Processing by LocationsController#show as JSON
+  Parameters: {"id"=>"states"}
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.8ms | Allocations: 1832)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=states):
+  
+app/controllers/locations_controller.rb:62:in `set_location'
+Started GET "/locations" for ::1 at 2021-10-07 18:14:20 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4699)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.6ms | Allocations: 5292)
+
+
+Started GET "/locations/new" for ::1 at 2021-10-07 18:14:22 -0400
+Processing by LocationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 2.9ms | Allocations: 990)
+  Rendered locations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4764)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 5354)
+
+
+Started POST "/locations" for ::1 at 2021-10-07 18:14:29 -0400
+Processing by LocationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "location"=>{"name"=>"Bob", "address"=>"Trunk lane"}, "commit"=>"Create Location"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+  [1m[36mLocation Create (5.3ms)[0m  [1m[32mINSERT INTO "locations" ("name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bob"], ["address", "Trunk lane"], ["created_at", "2021-10-07 22:14:29.229883"], ["updated_at", "2021-10-07 22:14:29.229883"]]
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/locations/3
+Completed 302 Found in 13ms (ActiveRecord: 7.3ms | Allocations: 3295)
+
+
+Started GET "/locations/3" for ::1 at 2021-10-07 18:14:29 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3552)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 4708)
+
+
+Started GET "/services/jwt" for ::1 at 2021-10-07 18:14:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/services/jwt"):
+  
+Started GET "/locations/states.json" for ::1 at 2021-10-07 18:14:29 -0400
+Processing by LocationsController#show as JSON
+  Parameters: {"id"=>"states"}
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.3ms | Allocations: 1586)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=states):
+  
+app/controllers/locations_controller.rb:62:in `set_location'
+Started GET "/videos" for ::1 at 2021-10-07 18:14:33 -0400
+Started GET "/images" for ::1 at 2021-10-07 18:14:33 -0400
+Started GET "/comments" for ::1 at 2021-10-07 18:14:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/videos"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+Started GET "/locations/3" for ::1 at 2021-10-07 18:16:15 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4143)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.6ms | Allocations: 6060)
+
+
+Started GET "/services/jwt" for ::1 at 2021-10-07 18:16:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/services/jwt"):
+  
+Started GET "/locations/states.json" for ::1 at 2021-10-07 18:16:15 -0400
+Processing by LocationsController#show as JSON
+  Parameters: {"id"=>"states"}
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms | Allocations: 1614)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=states):
+  
+app/controllers/locations_controller.rb:62:in `set_location'
+Started GET "/locations/3" for ::1 at 2021-10-07 18:18:25 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 12016)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.7ms | Allocations: 13933)
+
+
+Started GET "/services/jwt" for ::1 at 2021-10-07 18:18:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/services/jwt"):
+  
+Started GET "/locations/new" for ::1 at 2021-10-07 18:18:39 -0400
+Processing by LocationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 2.7ms | Allocations: 1006)
+  Rendered locations/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5020)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 6243)
+
+
+Started GET "/locations/new" for ::1 at 2021-10-07 18:18:39 -0400
+Processing by LocationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (Duration: 1.6ms | Allocations: 671)
+  Rendered locations/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4211)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4675)
+
+
+Started GET "/locations" for ::1 at 2021-10-07 18:18:41 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4799)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.9ms | Allocations: 5391)
+
+
+Started DELETE "/locations/3" for ::1 at 2021-10-07 18:18:44 -0400
+Processing by LocationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/locations_controller.rb:52:in `destroy'
+  [1m[36mLocation Destroy (2.3ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/locations_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/locations_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/locations
+Completed 302 Found in 15ms (ActiveRecord: 8.8ms | Allocations: 2876)
+
+
+Started GET "/locations" for ::1 at 2021-10-07 18:18:44 -0400
+Processing by LocationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/views/locations/index.html.erb:15
+  Rendered locations/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4451)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.8ms | Allocations: 4917)
+
+
+Started GET "/locations/2" for ::1 at 2021-10-07 18:18:47 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (2.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3658)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 2.3ms | Allocations: 4940)
+
+
+Started GET "/locations/2" for ::1 at 2021-10-07 18:18:48 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3495)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 4644)
+
+
+Started GET "/services/jwt" for ::1 at 2021-10-07 18:18:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/services/jwt"):
+  
+Started GET "/locations/2" for ::1 at 2021-10-07 18:18:49 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:62:in `set_location'
+  Rendering layout layouts/application.html.erb
+  Rendering locations/show.html.erb within layouts/application
+  Rendered locations/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3504)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 4651)
+
+
+Started GET "/services/jwt" for ::1 at 2021-10-07 18:18:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/services/jwt"):
+  
